@@ -1,0 +1,34 @@
+<div class="mat-elevation-z8">
+   <mat-table #table [dataSource]="dataSource" matSort aria-label="Elements">
+
+      <!-- playerUID Column -->
+      <ng-container matColumnDef="playerUID">
+         <mat-header-cell *matHeaderCellDef mat-sort-header>playerUID</mat-header-cell>
+         <mat-cell *matCellDef="let row">{{row.playerUID}}</mat-cell>
+      </ng-container>
+
+      <!-- playerName Column -->
+      <ng-container matColumnDef="playerName">
+         <mat-header-cell *matHeaderCellDef mat-sort-header>playerName</mat-header-cell>
+         <mat-cell *matCellDef="let row">{{row.playerName}}</mat-cell>
+      </ng-container>
+
+      <!-- playerMorality Column -->
+      <ng-container matColumnDef="playerMorality">
+         <mat-header-cell *matHeaderCellDef mat-sort-header>playerMorality</mat-header-cell>
+         <mat-cell *matCellDef="let row">{{row.playerMorality}}</mat-cell>
+      </ng-container>
+
+      <!-- playerID Column -->
+      <ng-container matColumnDef="playerID">
+         <mat-header-cell *matHeaderCellDef mat-sort-header>playerID</mat-header-cell>
+         <mat-cell *matCellDef="let row">{{row.playerID}}</mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+   </mat-table>
+
+   <mat-paginator #paginator [length]="dataSource.length" [pageIndex]="0" [pageSize]="50" [pageSizeOptions]="[25, 50, 100, 250]">
+   </mat-paginator>
+</div>

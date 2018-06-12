@@ -4,7 +4,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Run the following to connect to our local server (hosted by different project)
+    > ng serve --proxy-config proxy.conf.json  
+    * the proxy file allows the CORS to work between client/server projects
+
+* Use the `ng` commands for generating new components and other tools like tables, etc.  
+    > ng generate component user-detail
+    > ng generate service my-service
+
+* Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
